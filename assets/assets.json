@@ -1,0 +1,18 @@
+{
+  "quotes": [
+    "Cultivation of mind should be the ultimate aim of human existence.",
+    "Educate, Agitate, Organise.",
+    "I measure the progress of a community by the degree of progress which women have achieved.",
+    "Life should be great rather than long.",
+    "Political democracy cannot last unless there lies at the base of it social democracy.",
+    "Constitutional morality is not a natural sentiment. It has to be cultivated."
+  ],
+  "cards": [
+    { "title": "Explore", "folder": "../explore/explore.html", "icon": "box", "desc": "Rare restored image vaults and historical assembly photos.", "accent": false },
+    { "title": "Search", "folder": "../books/books.html?focus=search", "icon": "search", "desc": "Universal cross-reference across books, gazettes, and speeches.", "accent": true },
+    { "title": "Books", "folder": "../books/books.html", "icon": "book", "desc": "All 39 Volumes: Full 500+ page downloads, AI summaries, & voice reader.", "accent": false },
+    { "title": "Speeches", "folder": "../speech/speech.html", "icon": "microphone", "desc": "Original voice recordings of Constituent debates and radio broadcasts.", "accent": false },
+    { "title": "Meet Him", "folder": "../meet/meet.html", "icon": "video", "desc": "Archival footage and BBC interview reels played directly in-app.", "accent": false },
+    { "title": "Constitution", "folder": "../constitution/constitution.html", "icon": "scale", "desc": "Segregated sessions on Female Rights, Hindu Code Bill, and Labor Acts.", "accent": false }
+  ]
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Archive Guide | Dr. B. R. Ambedkar</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="chatbot.css" />
+</head>
+<body>
+	<main class="chat-shell">
+		<header class="chat-header">
+			<a href="../home/home.html" class="back-link">&larr; Back to Dashboard</a>
+			<p class="eyebrow">VOICE ARCHIVE GUIDE</p>
+			<h1>Ask Babasaheb's archive</h1>
+			<p>Ask about a movement, book, law, place, or idea. The guide follows your question instead of repeating one reply.</p>
+		</header>
+		<section class="chat-layout">
+			<div class="chat-panel">
+				<div class="messages" id="messages" aria-live="polite"></div>
+				<div class="composer">
+					<input id="questionInput" type="text" placeholder="Try: What happened at Columbia?" autocomplete="off" />
+					<button id="sendButton" type="button">Ask</button>
+					<button id="voiceButton" class="icon-button" type="button" title="Start voice command" aria-label="Start voice command">Mic</button>
+				</div>
+				<div class="voice-status" id="voiceStatus">Voice input is ready when your browser supports speech recognition.</div>
+			</div>
+			<aside class="voice-settings">
+				<p class="eyebrow">TALK BACK</p>
+				<label>Response language<select id="languageSelect"><option value="en">English</option><option value="hi">Hindi</option><option value="mr">Marathi</option><option value="bn">Bengali</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="kn">Kannada</option><option value="gu">Gujarati</option><option value="es">Spanish</option><option value="fr">French</option><option value="de">German</option><option value="ar">Arabic</option></select></label>
+				<label class="toggle-row"><input id="speakToggle" type="checkbox" checked /> Speak every answer</label>
+				<button id="stopVoice" type="button" class="secondary-button">Stop speaking</button>
+				<div class="suggestions"><button type="button" data-question="What did he study at Columbia University?">Columbia studies</button><button type="button" data-question="Why is Article 32 called the heart and soul?">Article 32</button><button type="button" data-question="Tell me about the Mahad Satyagraha.">Mahad Satyagraha</button></div>
+			</aside>
+		</section>
+	</main>
+	<script src="chatbot.js"></script>
+</body>
+</html>

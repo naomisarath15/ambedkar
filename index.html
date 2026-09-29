@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life Line | Dr. B. R. Ambedkar Archival Memorial</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Playfair+Display:ital,wght@1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #0a0604;
+      --card-bg: #1c100a;
+      --card-glass: rgba(28, 16, 10, 0.92);
+      --card-border: rgba(223, 177, 91, 0.25);
+      --gold-primary: #dfb15b;
+      --gold-glow: rgba(223, 177, 91, 0.45);
+      --parchment: #fbf7f0;
+      --text-dim: #d5cbbe;
+      --font-heading: 'Cinzel', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-quote: 'Playfair Display', serif;
+      --transition: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--parchment);
+      font-family: var(--font-body);
+      line-height: 1.5;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .ambient-backdrop {
+      position: fixed; inset: 0;
+      background: radial-gradient(circle at 75% 25%, rgba(223, 177, 91, 0.18) 0%, transparent 60%),
+                  linear-gradient(180deg, rgba(10, 6, 4, 0.45) 0%, rgba(10, 6, 4, 0.88) 60%, #0a0604 100%),
+                  radial-gradient(circle at 50% 50%, #1c100a 0%, #0a0604 100%);
+      background-size: cover; background-position: center top;
+      filter: contrast(1.15) brightness(0.28) sepia(60%);
+      pointer-events: none; z-index: 0;
+    }
+
+    .goog-te-banner-frame { display: none !important; }
+    body > .skiptranslate { display: inline-block; }
+    .google-translate-box { display: inline-flex; align-items: center; }
+    .goog-te-gadget-simple {
+      background-color: rgba(28, 16, 10, 0.85) !important;
+      border: 1px solid var(--card-border) !important;
+      border-radius: 30px !important;
+      padding: 0.35rem 0.65rem !important;
+      font-family: var(--font-body) !important;
+      font-size: 0.75rem !important;
+      color: var(--parchment) !important;
+      cursor: pointer;
+    }
+    .goog-te-gadget-simple:hover { border-color: var(--gold-primary) !important; box-shadow: 0 0 10px var(--gold-glow); }
+    .goog-te-gadget-simple .goog-te-menu-value span { color: var(--parchment) !important; }
+    .goog-te-gadget-icon { display: none !important; }
+
+    .portal-viewport {
+      position: relative; z-index: 10; width: 100%; max-width: 480px; margin: 0 auto;
+      min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 90px;
+    }
+
+    .portal-app-bar { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 1.2rem 0.6rem; }
+    .brand-crest-group { display: flex; align-items: center; gap: 0.75rem; }
+    .brand-crest-icon { width: 36px; height: 36px; flex-shrink: 0; }
+    .crest-svg { width: 100%; height: 100%; filter: drop-shadow(0 0 6px var(--gold-glow)); }
+    .brand-title { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; color: var(--gold-primary); line-height: 1.1; }
+    .brand-tagline { font-family: var(--font-heading); font-size: 0.56rem; letter-spacing: 0.16rem; color: var(--text-dim); }
+
+    .portal-main-stream { padding: 0.6rem 1.1rem; display: flex; flex-direction: column; gap: 1.2rem; }
+
+    /* ==========================================================================
+       HERO TRIBUTE CARD (Shows portrait, 1891-1956 & quote directly, NO stuck overlay)
+       ========================================================================== */
+    .hero-tribute-card {
+      position: relative;
+      background: linear-gradient(135deg, rgba(28, 16, 10, 0.95), rgba(15, 8, 5, 0.98));
+      border: 1px solid var(--gold-primary);
+      border-radius: 18px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(223, 177, 91, 0.15);
+    }
+
+    .tribute-header-row {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .tribute-cameo-frame {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid var(--gold-primary);
+      box-shadow: 0 0 18px var(--gold-glow);
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #0f0805;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tribute-cameo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .tribute-info-block { flex: 1; }
+    .tribute-badge {
+      font-family: var(--font-heading); font-size: 0.65rem; letter-spacing: 0.2rem; color: var(--gold-primary); display: block;
+    }
+    .tribute-name {
+      font-family: var(--font-heading); font-size: 1.5rem; font-weight: 900; color: var(--parchment); line-height: 1.15; margin: 0.2rem 0;
+    }
+    .tribute-lifespan {
+      font-family: var(--font-heading); font-size: 0.78rem; font-weight: 700; color: var(--gold-primary); letter-spacing: 0.1rem;
+    }
+
+    .tribute-quote-block {
+      background: rgba(10, 6, 4, 0.75);
+      border-left: 3px solid var(--gold-primary);
+      padding: 0.8rem 1rem;
+      border-radius: 0 8px 8px 0;
+    }
+    .tribute-quote-text {
+      font-family: var(--font-quote); font-style: italic; font-size: 1.05rem; color: var(--parchment); line-height: 1.4;
+    }
+    .tribute-quote-author {
+      display: block; font-family: var(--font-heading); font-size: 0.65rem; color: var(--gold-primary); letter-spacing: 0.12rem; margin-top: 0.4rem;
+    }
+
+    .hero-cta-btn {
+      background: var(--gold-primary); color: #0a0604; border: none; padding: 0.65rem 1.3rem; border-radius: 30px;
+      font-family: var(--font-heading); font-weight: 800; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center;
+      gap: 0.5rem; cursor: pointer; box-shadow: 0 4px 15px rgba(223, 177, 91, 0.35); width: 100%; transition: transform 0.2s;
+    }
+    .hero-cta-btn:hover { transform: translateY(-2px); }
+
+    .section-title-wrap { display: flex; align-items: center; gap: 0.8rem; margin: 0.4rem 0 0.1rem; }
+    .gold-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--card-border), transparent); }
+    .section-heading { font-family: var(--font-heading); font-size: 0.72rem; letter-spacing: 0.2rem; color: var(--gold-primary); }
+
+    /* 3x3 Grid */
+    .aesthetic-widget-grid-3x3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+    .aesthetic-widget-card {
+      position: relative; background: var(--card-glass); border: 1px solid var(--card-border);
+      border-radius: 16px; padding: 1.1rem 0.6rem 0.85rem; display: flex; flex-direction: column;
+      align-items: center; justify-content: space-between; cursor: pointer; aspect-ratio: 1 / 1.15;
+      transition: all var(--transition); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    }
+    .aesthetic-widget-card:hover { transform: translateY(-4px); border-color: var(--gold-primary); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8), 0 0 18px var(--gold-glow); }
+    .widget-accent-corner { position: absolute; top: 7px; right: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold-primary); opacity: 0.5; }
+    .widget-icon-box {
+      width: 44px; height: 44px; border-radius: 12px; background: rgba(10, 6, 4, 0.6);
+      border: 1px solid rgba(223, 177, 91, 0.3); display: flex; align-items: center; justify-content: center; color: var(--gold-primary);
+    }
+    .widget-title { font-family: var(--font-heading); font-size: 0.74rem; font-weight: 700; text-align: center; color: var(--parchment); line-height: 1.2; }
+    .widget-arrow-badge { color: var(--gold-primary); font-size: 0.75rem; opacity: 0.75; }
+
+    .daily-quote-banner {
+      background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px;
+      padding: 1.1rem 1.2rem; display: flex; position: relative; overflow: hidden;
+    }
+    .quote-text-side { flex: 1.5; z-index: 2; }
+    .quote-tag-row { display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.35rem; }
+    .quote-glyph { font-family: var(--font-quote); font-size: 1.4rem; color: var(--gold-primary); line-height: 1; }
+    .quote-label { font-family: var(--font-heading); font-size: 0.62rem; letter-spacing: 0.14rem; color: var(--gold-primary); }
+    .quote-body { font-family: var(--font-quote); font-style: italic; font-size: 1rem; color: var(--parchment); margin-bottom: 0.35rem; }
+    .quote-citation { font-family: var(--font-heading); font-size: 0.56rem; letter-spacing: 0.12rem; color: var(--text-dim); }
+
+    .quote-cameo-arc {
+      flex: 0.9; position: absolute; right: 0; top: 0; bottom: 0; width: 125px;
+      border-top-left-radius: 120px; border-bottom-left-radius: 120px; border-left: 1px solid var(--gold-primary); overflow: hidden;
+    }
+    .quote-cameo-arc img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Bottom Dock */
+    .bottom-dock-nav {
+      position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 480px;
+      background: rgba(15, 8, 5, 0.96); border-top: 1px solid var(--card-border); backdrop-filter: blur(12px);
+      display: flex; justify-content: space-around; padding: 0.6rem 0.5rem 1.4rem; z-index: 50;
+    }
+    .dock-tab {
+      background: transparent; border: none; color: var(--text-dim); display: flex; flex-direction: column;
+      align-items: center; gap: 0.25rem; cursor: pointer; font-size: 0.65rem; font-family: var(--font-heading);
+    }
+    .dock-tab.active, .dock-tab:hover { color: var(--gold-primary); }
+
+    /* ==========================================================================
+       LANDSCAPE COCKPIT MODE (For Laptops, Tablets, Rotated Screens)
+       ========================================================================== */
+    @media (min-width: 900px), (min-width: 700px) and (orientation: landscape) {
+      .portal-viewport {
+        max-width: 1300px;
+        padding: 0 2rem 5rem;
+      }
+      .portal-main-stream {
+        display: grid;
+        grid-template-columns: 460px 1fr;
+        gap: 2rem;
+        align-items: start;
+        padding: 1.2rem 0;
+      }
+      .landscape-left-col {
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+        position: sticky;
+        top: 1.2rem;
+      }
+      .landscape-right-col {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .aesthetic-widget-grid-3x3 {
+        gap: 1.1rem;
+      }
+      .aesthetic-widget-card {
+        aspect-ratio: 1 / 1;
+        padding: 1.4rem 0.8rem 1.1rem;
+      }
+      .widget-icon-box {
+        width: 52px;
+        height: 52px;
+      }
+      .widget-title {
+        font-size: 0.88rem;
+      }
+      .bottom-dock-nav {
+        max-width: 600px;
+        border-radius: 35px 35px 0 0;
+      }
+    }
+
+    /* Modal Layer */
+    .portal-modal-layer {
+      position: fixed; inset: 0; background: #0a0604; z-index: 250; display: none;
+      flex-direction: column; overflow-y: auto; opacity: 0; transform: translateY(20px); transition: all 0.3s ease;
+    }
+    .portal-modal-layer.open { display: flex; opacity: 1; transform: translateY(0); }
+
+    .modal-top-bar {
+      padding: 1.1rem 1.4rem; display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--card-border); background: #140b07; position: sticky; top: 0; z-index: 10;
+    }
+    .modal-return-btn {
+      background: var(--card-bg); color: var(--gold-primary); border: 1px solid var(--card-border);
+      border-radius: 30px; padding: 0.4rem 0.9rem; font-family: var(--font-heading); font-size: 0.78rem;
+      display: flex; align-items: center; gap: 0.4rem; cursor: pointer;
+    }
+    .modal-meta-title { text-align: right; }
+    .modal-meta-title .tag { font-size: 0.6rem; letter-spacing: 0.15rem; color: var(--gold-primary); }
+    .modal-meta-title h2 { font-family: var(--font-heading); font-size: 1rem; color: var(--parchment); }
+    .modal-body-scroll { padding: 1.2rem; max-width: 1200px; margin: 0 auto; width: 100%; }
+
+    .module-hero-box {
+      background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px;
+      padding: 1.4rem; margin-bottom: 1.2rem; text-align: center;
+    }
+    .module-hero-box h3 { font-family: var(--font-heading); color: var(--gold-primary); margin-bottom: 0.5rem; }
+    .module-hero-box p { color: var(--text-dim); font-size: 0.9rem; }
+
+    /* Video Player */
+    .speech-video-card {
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: 14px; overflow: hidden; margin-bottom: 1.8rem; box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    }
+    .speech-media-frame { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; background: #000; }
+    .speech-media-frame iframe { position: absolute; top:0; left:0; width:100%; height:100%; border:none; }
+    .speech-dossier-body { padding: 1.2rem 1.4rem; }
+    .speech-date-badge { font-family: var(--font-heading); color: var(--gold-primary); font-size: 0.8rem; font-weight: bold; }
+    .speech-title-heading { font-family: var(--font-heading); font-size: 1.25rem; color: var(--parchment); margin: 0.3rem 0 0.8rem; }
+    .speech-transcript-quote {
+      font-family: var(--font-quote); font-style: italic; color: var(--text-dim); line-height: 1.6;
+      border-left: 3px solid var(--gold-primary); padding-left: 1rem; margin-bottom: 0.8rem;
+    }
+
+    /* 3D Movements */
+    .movement-swipe-container { position: relative; width: 100%; min-height: 480px; margin: 1rem 0; perspective: 1200px; }
+    .movement-card-stage { position: relative; width: 100%; min-height: 460px; }
+    .movement-3d-card {
+      position: absolute; inset: 0; background: var(--card-bg); border: 1px solid var(--gold-primary);
+      border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+      display: grid; grid-template-columns: 380px 1fr; overflow: hidden;
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease; transform-origin: center center;
+    }
+    .movement-3d-card.current { z-index: 10; opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+    .movement-3d-card.prev { z-index: 5; opacity: 0; transform: translate3d(-100px, 0, -250px) rotateY(25deg); pointer-events: none; }
+    .movement-3d-card.next { z-index: 5; opacity: 0.4; transform: translate3d(60px, 0, -180px) rotateY(-15deg); pointer-events: none; }
+    .movement-photo-pane { background: #0f0805; padding: 12px; display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--card-border); }
+    .movement-photo-pane img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .movement-narrative-pane { padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+    .movement-year-stamp { font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.1rem; font-weight: bold; }
+    .movement-title-heading { font-family: var(--font-heading); font-size: 1.6rem; color: var(--parchment); margin: 0.3rem 0 1rem; }
+    .movement-desc-text { color: var(--text-dim); font-size: 0.96rem; line-height: 1.75; margin-bottom: 1.4rem; }
+    .movement-carousel-nav { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; }
+
+    @media (max-width: 800px) {
+      .movement-3d-card { grid-template-columns: 1fr; position: relative; min-height: 520px; }
+      .movement-photo-pane { height: 240px; border-right: none; border-bottom: 1px solid var(--card-border); }
+      .movement-narrative-pane { padding: 1.2rem; }
+    }
+
+    /* 39 Books */
+    .books-grid-39 { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+    .book-interactive-card {
+      background: var(--card-glass); border: 1px solid var(--card-border); border-radius: 12px;
+      padding: 1.1rem; cursor: pointer; transition: all 0.25s ease;
+    }
+    .book-interactive-card:hover { border-color: var(--gold-primary); transform: translateY(-4px); }
+    .book-year-badge { font-family: var(--font-heading); color: var(--gold-primary); font-size: 0.75rem; font-weight: bold; }
+    .book-card-title { font-family: var(--font-heading); font-size: 0.95rem; color: var(--parchment); margin: 0.3rem 0 0.5rem; }
+    .book-card-summary { font-size: 0.8rem; color: var(--text-dim); line-height: 1.5; }
+    .ai-summary-pill { display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.6rem; font-size: 0.68rem; color: var(--gold-primary); font-family: var(--font-heading); }
+
+    /* Family */
+    .family-cameo-ring-row {
+      display: flex; gap: 1.2rem; justify-content: center; overflow-x: auto; padding: 1rem 0;
+      margin-bottom: 1.5rem; scrollbar-width: thin; scrollbar-color: var(--gold-primary) var(--card-bg);
+    }
+    .family-cameo-circle-item {
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      cursor: pointer; opacity: 0.65; transition: all 0.3s ease; flex-shrink: 0;
+    }
+    .family-cameo-circle-item.active, .family-cameo-circle-item:hover { opacity: 1; transform: translateY(-3px); }
+    .family-cameo-circle-frame {
+      width: 82px; height: 82px; border-radius: 50%; border: 2px solid var(--card-border);
+      overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.6); background: #0f0805;
+    }
+    .family-cameo-circle-item.active .family-cameo-circle-frame { border-color: var(--gold-primary); box-shadow: 0 0 20px var(--gold-glow); transform: scale(1.1); }
+    .family-cameo-circle-frame img { width: 100%; height: 100%; object-fit: cover; }
+    .family-cameo-label { font-family: var(--font-heading); font-size: 0.76rem; color: var(--parchment); }
+
+    .family-active-dossier-card {
+      background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px;
+      display: grid; grid-template-columns: 380px 1fr; overflow: hidden; padding: 1.5rem; gap: 1.8rem;
+    }
+    .family-dossier-portrait {
+      width: 100%; height: 380px; background: #0f0805; border: 4px solid #2a1910; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
+    }
+    .family-dossier-portrait img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+    /* Chatbot */
+    .chat-container { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; display: flex; flex-direction: column; height: 480px; }
+    .chat-messages { flex: 1; padding: 1rem; overflow-y: auto; display: flex; flex-direction: column; gap: 0.75rem; }
+    .chat-bubble { max-width: 80%; padding: 0.75rem 1rem; border-radius: 12px; font-size: 0.88rem; line-height: 1.4; }
+    .chat-bubble.bot { background: rgba(223, 177, 91, 0.15); border: 1px solid var(--card-border); align-self: flex-start; }
+    .chat-bubble.user { background: var(--gold-primary); color: #0a0604; align-self: flex-end; font-weight: 500; }
+    .chat-input-row { display: flex; border-top: 1px solid var(--card-border); padding: 0.6rem; gap: 0.5rem; }
+    .chat-input { flex: 1; background: #0a0604; border: 1px solid var(--card-border); border-radius: 20px; color: #fff; padding: 0.5rem 1rem; font-size: 0.85rem; outline: none; }
+    .chat-send-btn { background: var(--gold-primary); border: none; color: #0a0604; border-radius: 20px; padding: 0.5rem 1.2rem; font-weight: bold; cursor: pointer; }
+
+    /* Quotes Deck */
+    .quotes-filter-tabs { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.8rem; margin-bottom: 1rem; }
+    .q-filter-btn {
+      background: var(--card-bg); color: var(--text-dim); border: 1px solid var(--card-border);
+      border-radius: 20px; padding: 0.4rem 0.9rem; font-size: 0.78rem; cursor: pointer; white-space: nowrap; font-family: var(--font-heading);
+    }
+    .q-filter-btn.active { background: var(--gold-primary); color: #0a0604; font-weight: 700; }
+    .quote-display-card {
+      background: var(--card-glass); border: 1px solid var(--card-border);
+      border-left: 4px solid var(--gold-primary); border-radius: 12px; padding: 1.3rem; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1rem;
+    }
+    .quote-category-tag { font-size: 0.68rem; letter-spacing: 0.12rem; color: var(--gold-primary); font-family: var(--font-heading); text-transform: uppercase; }
+    .quote-main-content { font-family: var(--font-quote); font-style: italic; font-size: 1.15rem; line-height: 1.45; color: var(--parchment); }
+    .quote-author-source { display: flex; align-items: center; justify-content: space-between; font-size: 0.72rem; color: var(--text-dim); font-family: var(--font-heading); }
+
+    .t-pill-btn {
+      background: var(--card-bg); color: var(--gold-primary); border: 1px solid var(--card-border);
+      border-radius: 30px; padding: 0.5rem 1.2rem; display: flex; align-items: center; gap: 0.4rem; cursor: pointer; font-family: var(--font-heading); font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-backdrop" id="ambientBackdrop"></div>
+
+  <div class="portal-viewport">
+    
+    <!-- Top Header -->
+    <header class="portal-app-bar">
+      <div class="brand-crest-group">
+        <div class="brand-crest-icon">
+          <svg viewBox="0 0 40 40" fill="none" class="crest-svg">
+            <path d="M7 29C11 27 16 27 20 29.5V11C16 9 11 9 7 11V29Z" stroke="#dfb15b" stroke-width="2"/>
+            <path d="M33 29C29 27 24 27 20 29.5V11C24 9 29 9 33 11V29Z" stroke="#dfb15b" stroke-width="2"/>
+            <path d="M20 7V29.5" stroke="#dfb15b" stroke-width="1.8"/>
+            <circle cx="8" cy="8" r="1.5" fill="#dfb15b"/>
+            <circle cx="32" cy="8" r="1.5" fill="#dfb15b"/>
+            <path d="M20 3L21.5 5.5L24 7L21.5 8.5L20 11L18.5 8.5L16 7L18.5 5.5L20 3Z" fill="#dfb15b"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="brand-title">Life Line</h1>
+          <span class="brand-tagline">THE JOURNEY OF A VISIONARY</span>
+        </div>
+      </div>
+
+      <div id="google_translate_element" class="google-translate-box"></div>
+    </header>
+
+    <!-- Main Dashboard Stream (Dual-Cockpit on Landscape) -->
+    <main class="portal-main-stream">
+
+      <!-- LEFT COCKPIT: Integrated Hero & Lifespan Card + Today's Quote -->
+      <div class="landscape-left-col">
+        
+        <section class="hero-tribute-card">
+          <div class="tribute-header-row">
+            <div class="tribute-cameo-frame">
+              <img id="heroAmbedkarImg" alt="Dr. B. R. Ambedkar" />
+            </div>
+            <div class="tribute-info-block">
+              <span class="tribute-badge">BABASAHEB</span>
+              <h2 class="tribute-name">Dr. B. R. Ambedkar</h2>
+              <p class="tribute-lifespan">14 APRIL 1891 — 06 DECEMBER 1956</p>
+            </div>
+          </div>
+
+          <div class="tribute-quote-block">
+            <p class="tribute-quote-text">“Educate, Agitate, Organise.<br>Have faith in yourselves and never lose hope.”</p>
+            <span class="tribute-quote-author">— B. R. AMBEDKAR</span>
+          </div>
+
+          <button class="hero-cta-btn" id="heroExploreBtn">
+            <span>Explore His Legacy →</span>
+          </button>
+        </section>
+
+        <section class="daily-quote-banner" id="dailyQuoteWidget" style="cursor: pointer;">
+          <div class="quote-text-side">
+            <div class="quote-tag-row">
+              <span class="quote-glyph">“</span>
+              <span class="quote-label">TODAY'S QUOTE</span>
+            </div>
+            <p class="quote-body">Life should be great rather than long.</p>
+            <span class="quote-citation">— B. R. AMBEDKAR</span>
+          </div>
+          <div class="quote-cameo-arc">
+            <img id="quoteCameoImg" alt="Dr. Ambedkar" />
+          </div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT COCKPIT: 3x3 Feature Grid -->
+      <div class="landscape-right-col">
+        <div class="section-title-wrap">
+          <span class="gold-line"></span>
+          <h3 class="section-heading">ARCHIVAL CHAPTERS</h3>
+          <span class="gold-line"></span>
+        </div>
+
+        <section class="aesthetic-widget-grid-3x3">
+          
+          <!-- 1. Life Line -> Get to know him more -->
+          <article class="aesthetic-widget-card" data-action="timeline" data-target="Get to know him more/Images/images.html">
+            <div class="widget-accent-corner"></div>
+            <div class="widget-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h4 class="widget-title">Life Line</h4>
+            <span class="widget-arrow-badge">→</span>
+          </article>
+
+          <!-- 2. Bot Babasaheb -> chatbot -->
+          <article class="aesthetic-widget-card" data-action="bot" data-target="chatbot/chatbot.html">
+            <div class="widget-accent-corner"></div>
+            <div class="widget-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8.01" y2="16"/><line x1="16" y1="16" x2="16.01" y2="16"/></svg>
+            </div>
+            <h4 class="widget-title">Bot Babasaheb</h4>
+            <span class="widget-arrow-badge">→</span>
+          </article>
+
+          <!-- 3. 89 Books -> books -->
+          <article class="aesthetic-widget-card" data-action="books" data-target="books/books.html">
+            <div class="widget-accent-corner"></div>
+            <div class="widget-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <h4 class="widget-title">89 Books</h4>
+            <span class="widget-arrow-badge">→</span>
+          </article>
+
+          <!-- 4. Speeches -> speech -->
+          <article class="aesthetic-widget-card" data-action="speeches" data-target="speech/speech.html">
+            <div class="widget-accent-corner"></div>
+            <div class="widget-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </div>
+            <h4 class="widget-title">Speeches</h4>
+            <span class="widget-arrow-badge">→</span>
+          </article>
+
+          <!-- 5. Constitution -> constitution -->
+          <article class="aesthetic-widget-card" data-action="constitution" data-target="constitution/constitution.html">
+            <div class="widget-accent-corner"></div>
+            <div class="widget-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h4 class="widget-title">Constitution</h4>
+            <span class="widget-arrow-badge">→</span>
+          </article>
+
+          <!-- 6. Family -> Family folder -->
+          <article class="aesthetic-widget-card" data-action="family" data-target="Family/Image/image.html">
+            <div class="widget-accent-corner"></div>
+            <div class="widget-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h4 class="widget-title">Family</h4>
+            <span class="widget-arrow-badge">→</span>
+          </article>
+
+          <!-- 7. Movement -> Movement folder -->
+          <article class="aesthetic-widget-card" data-action="movement" data-target="Movement/movement.html">
+            <div class="widget-accent-corner"></div>
+            <div class="widget-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            </div>
+            <h4 class="widget-title">Movement</h4>
+            <span class="widget-arrow-badge">→</span>
+          </article>
+
+          <!-- 8. Quotes -> explore or in-app modal -->
+          <article class="aesthetic-widget-card" data-action="quotes" data-target="explore/explore.html">
+            <div class="widget-accent-corner"></div>
+            <div class="widget-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/></svg>
+            </div>
+            <h4 class="widget-title">Quotes</h4>
+            <span class="widget-arrow-badge">→</span>
+          </article>
+
+          <!-- 9. Photo Vault -> meet folder -->
+          <article class="aesthetic-widget-card" data-action="photos" data-target="meet/meet.html">
+            <div class="widget-accent-corner"></div>
+            <div class="widget-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <h4 class="widget-title">Photo Vault</h4>
+            <span class="widget-arrow-badge">→</span>
+          </article>
+
+          <article class="aesthetic-widget-card" data-action="video" data-target="video/video.html">
+            <div class="widget-accent-corner"></div>
+            <div class="widget-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><polygon points="10 9 16 12 10 15 10 9"/></svg>
+            </div>
+            <h4 class="widget-title">Speech Cinema</h4>
+            <span class="widget-arrow-badge">→</span>
+          </article>
+
+          <article class="aesthetic-widget-card" data-action="quiz" data-target="quiz/quiz.html">
+            <div class="widget-accent-corner"></div>
+            <div class="widget-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h4 class="widget-title">Archive Quest</h4>
+            <span class="widget-arrow-badge">→</span>
+          </article>
+
+          <article class="aesthetic-widget-card" data-action="global" data-target="global/global.html">
+            <div class="widget-accent-corner"></div>
+            <div class="widget-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.2 2.5 3.2 5.5 3.2 9s-1 6.5-3.2 9c-2.2-2.5-3.2-5.5-3.2-9S9.8 5.5 12 3Z"/></svg>
+            </div>
+            <h4 class="widget-title">Global Journey</h4>
+            <span class="widget-arrow-badge">→</span>
+          </article>
+
+        </section>
+      </div>
+
+    </main>
+
+    <!-- Bottom Dock Navigation -->
+    <nav class="bottom-dock-nav">
+      <button class="dock-tab active" data-tab="home">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span>Home</span>
+      </button>
+      <button class="dock-tab" data-tab="timeline">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        <span>Explore</span>
+      </button>
+      <button class="dock-tab" data-tab="books">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        <span>Library</span>
+      </button>
+      <button class="dock-tab" data-tab="family">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Family</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- In-App Modal Container -->
+  <div class="portal-modal-layer" id="portalModal">
+    <div class="modal-top-bar">
+      <button class="modal-return-btn" id="closePortalModal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        <span>Return to Home</span>
+      </button>
+      <div class="modal-meta-title">
+        <span class="tag" id="modalCategoryTag">ARCHIVAL CHRONICLE</span>
+        <h2 id="modalMainHeading">ARCHIVE</h2>
+      </div>
+    </div>
+
+    <div class="modal-body-scroll" id="modalDynamicBody"></div>
+  </div>
+
+  <script>
+    /* ==========================================================================
+       IMAGE SAFE LOADER
+       ========================================================================== */
+    const svgFallback = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500"><rect width="100%" height="100%" fill="%23140b07"/><circle cx="200" cy="190" r="90" fill="%23dfb15b" opacity="0.3"/><circle cx="200" cy="180" r="70" fill="%23fbf7f0" opacity="0.85"/><path d="M160 160h25M215 160h25M170 175a15 15 0 1 0 30 0 15 15 0 1 0-30 0zm45 0a15 15 0 1 0 30 0 15 15 0 1 0-30 0z" stroke="%23140b07" stroke-width="4" fill="none"/><path d="M100 450c0-90 40-150 100-150s100 60 100 150z" fill="%231c100a" stroke="%23dfb15b" stroke-width="2"/><text x="200" y="475" fill="%23dfb15b" font-size="16" text-anchor="middle" font-family="serif">DR. B. R. AMBEDKAR</text></svg>';
+
+    function loadSafeImg(imgEl, filename) {
+      if (!imgEl) return;
+      const candidates = [
+        `Get to know him more/Images/${filename}`,
+        `Family/Images/${filename}`,
+        `Family/${filename}`,
+        `Images/${filename}`,
+        `home/Images/${filename}`,
+        `./${filename}`
+      ];
+      let idx = 0;
+      imgEl.onerror = function() {
+        idx++;
+        if (idx < candidates.length) {
+          this.src = encodeURI(candidates[idx]);
+        } else {
+          this.src = svgFallback;
+          this.onerror = null;
+        }
+      };
+      imgEl.src = encodeURI(candidates[0]);
+    }
+
+    loadSafeImg(document.getElementById("heroAmbedkarImg"), "Chairman Drafting Commitee.jpeg");
+    loadSafeImg(document.getElementById("quoteCameoImg"), "Ambedkar_Barrister.jpg");
+
+    /* ==========================================================================
+       MODAL CONTROLLER
+       ========================================================================== */
+    const portalModal = document.getElementById("portalModal");
+    const modalMainHeading = document.getElementById("modalMainHeading");
+    const modalCategoryTag = document.getElementById("modalCategoryTag");
+    const modalDynamicBody = document.getElementById("modalDynamicBody");
+
+    function openModal(category, title, htmlContent) {
+      modalCategoryTag.textContent = category;
+      modalMainHeading.textContent = title;
+      modalDynamicBody.innerHTML = htmlContent;
+      portalModal.classList.add("open");
+    }
+
+    document.getElementById("closePortalModal").addEventListener("click", () => {
+      portalModal.classList.remove("open");
+    });
+
+    /* ==========================================================================
+       SPEECHES MODULE (BBC YOUTUBE EMBED)
+       ========================================================================== */
+    function showSpeechesView() {
+      let html = `
+        <div class="module-hero-box">
+          <h3>HISTORIC RECORDINGS &amp; ORATIONS</h3>
+          <p>Watch and listen to Dr. B. R. Ambedkar's landmark addresses with synchronized transcripts.</p>
+        </div>
+        <div class="speech-video-card">
+          <div class="speech-media-frame">
+            <iframe 
+              src="https://www.youtube-nocookie.com/embed/WS7P9TKDZ2k" 
+              title="BBC Historic Interview" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="speech-dossier-body">
+            <span class="speech-date-badge">Recorded in 1953 (BBC Archives)</span>
+            <h4 class="speech-title-heading">BBC Historic TV Interview: 'The Social Structure Must Change'</h4>
+            <blockquote class="speech-transcript-quote">"Democracy will not work... for the simple reason that we have got a social structure which is totally incompatible with parliamentary democracy. Unless you get rid of the caste system, the social structure has got to be altered. We like to have action."</blockquote>
+            <p style="font-size:0.85rem; color:var(--text-dim);">Exclusive BBC broadcast interview where Dr. Ambedkar analyzes elections, Indian parliamentary democracy, social inequality, and economic structures.</p>
+          </div>
+        </div>
+      `;
+      openModal("ORATIONS", "Historic Speeches & Audio", html);
+    }
+
+    /* ==========================================================================
+       MOVEMENTS 3D SWIPE CAROUSEL
+       ========================================================================== */
+    const movementMilestones = [
+      { year: "20 March 1927", title: "Mahad Satyagraha (Chawdar Tank)", img: "profe.jpeg", desc: "Led untouchables to assert their basic human right to drink water from the public Chawdar Tank in Mahad, Maharashtra. Celebrated annually as Social Empowerment Day." },
+      { year: "25 December 1927", title: "Manusmriti Dahan Din", img: "Ambedkar_Barrister.jpg", desc: "Publicly burned copies of the Manusmriti in Mahad to openly condemn hereditary untouchability and gender subjugation." },
+      { year: "02 March 1930", title: "Kalaram Temple Entry Satyagraha", img: "colombia university.jpeg", desc: "Organized thousands of satyagrahis in Nashik demanding equal rights for depressed classes to enter Hindu temples." },
+      { year: "24 September 1932", title: "The Poona Pact", img: "193-1916.jpeg", desc: "Historic pact signed with Mahatma Gandhi to secure reserved legislative seats for the Depressed Classes instead of separate electorates." },
+      { year: "14 October 1956", title: "Dhamma Deeksha at Nagpur", img: "images.jpg", desc: "Alongside over 500,000 followers, Dr. Ambedkar renounced Hinduism and embraced Buddhism at Deekshabhoomi, taking the 22 solemn vows." }
+    ];
+
+    let activeMoveIdx = 0;
+    function showMovementView() {
+      let html = `
+        <div class="module-hero-box">
+          <h3>HISTORIC CIVIL RIGHTS STRUGGLES</h3>
+          <p>Swipe or click Next/Previous to explore each satyagraha with its archival photograph and narrative.</p>
+        </div>
+
+        <div class="movement-swipe-container" id="movementSwipeArea">
+          <div class="movement-card-stage" id="movementStage">
+            ${movementMilestones.map((m, idx) => `
+              <div class="movement-3d-card ${idx === 0 ? 'current' : idx === 1 ? 'next' : 'prev'}" data-midx="${idx}">
+                <div class="movement-photo-pane">
+                  <img id="mimg-${idx}" alt="${m.title}" />
+                </div>
+                <div class="movement-narrative-pane">
+                  <span class="movement-year-stamp">${m.year}</span>
+                  <h3 class="movement-title-heading">${m.title}</h3>
+                  <p class="movement-desc-text">${m.desc}</p>
+                  <div style="font-size:0.75rem; color:var(--gold-primary); font-family:var(--font-heading);">
+                    Movement 0${idx + 1} / 0${movementMilestones.length}
+                  </div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <div class="movement-carousel-nav">
+          <button class="t-pill-btn" id="mPrevBtn">Previous</button>
+          <button class="t-pill-btn" id="mNextBtn">Next Movement →</button>
+        </div>
+      `;
+
+      openModal("MOVEMENTS", "Civil Rights Struggles", html);
+
+      movementMilestones.forEach((m, idx) => {
+        loadSafeImg(document.getElementById(`mimg-${idx}`), m.img);
+      });
+
+      function update3DCardPositions(newIdx) {
+        activeMoveIdx = (newIdx + movementMilestones.length) % movementMilestones.length;
+        const cards = document.querySelectorAll(".movement-3d-card");
+        cards.forEach((card, idx) => {
+          card.className = "movement-3d-card";
+          if (idx === activeMoveIdx) card.classList.add("current");
+          else if (idx === (activeMoveIdx + 1) % movementMilestones.length) card.classList.add("next");
+          else card.classList.add("prev");
+        });
+      }
+
+      document.getElementById("mNextBtn").addEventListener("click", () => update3DCardPositions(activeMoveIdx + 1));
+      document.getElementById("mPrevBtn").addEventListener("click", () => update3DCardPositions(activeMoveIdx - 1));
+    }
+
+    /* ==========================================================================
+       ALL 39 BOOKS
+       ========================================================================== */
+    const all39Books = [
+      { id: 1, year: "1916", title: "Castes in India", desc: "Their Mechanism, Genesis and Development (Columbia University Paper)." },
+      { id: 2, year: "1923", title: "The Problem of the Rupee", desc: "Its Origin and Its Solution. D.Sc. dissertation analyzing currency standards." },
+      { id: 3, year: "1925", title: "The Evolution of Provincial Finance in British India", desc: "Study of financial decentralization in British colonial administration." },
+      { id: 4, year: "1936", title: "Annihilation of Caste", desc: "Foundational text on social democracy, criticizing the hereditary hierarchical caste order." },
+      { id: 5, year: "1937", title: "Federation versus Freedom", desc: "Critical examination of the 1935 Government of India Act federal structure." },
+      { id: 6, year: "1940", title: "Thoughts on Pakistan", desc: "Deep geographical, demographic, and sociological analysis of the Pakistan demand." },
+      { id: 7, year: "1943", title: "Mr. Gandhi and the Emancipation of the Untouchables", desc: "Address at the Pacific Relations Conference on political rights." },
+      { id: 8, year: "1943", title: "Ranade, Gandhi and Jinnah", desc: "Address on political leadership and democracy delivered in Poona." },
+      { id: 9, year: "1945", title: "What Congress and Gandhi Have Done to the Untouchables", desc: "Exposition of political representation and social justice." },
+      { id: 10, year: "1945", title: "Communal Deadlock and a Way to Solve It", desc: "Constitutional proposals to resolve religious and communal deadlocks." },
+      { id: 11, year: "1946", title: "Who Were the Shudras?", desc: "Historical inquiry into Aryan society and origins of the fourth Varna." },
+      { id: 12, year: "1947", title: "States and Minorities", desc: "Constitution for the United States of India establishing state socialism." },
+      { id: 13, year: "1948", title: "The Untouchables: Who Were They?", desc: "Thesis on Broken Men and the roots of untouchability." },
+      { id: 14, year: "1948", title: "Maharashtra as a Linguistic Province", desc: "Statement submitted to the Linguistic Provinces Commission." },
+      { id: 15, year: "1949", title: "Drafting of the Indian Constitution", desc: "Official debates, draft provisions, and constituent assembly presentations." },
+      { id: 16, year: "1951", title: "The Hindu Code Bill", desc: "Draft legislation for uniform gender property, marriage, and guardianship rights." },
+      { id: 17, year: "1952", title: "Future of Parliamentary Democracy", desc: "Oration on conditions essential for democratic longevity in developing states." },
+      { id: 18, year: "1953", title: "Linguistic States: Need for Checks and Balances", desc: "Critique on linguistic balkanization and national administrative cohesion." },
+      { id: 19, year: "1955", title: "Thoughts on Linguistic States", desc: "Proposals for balanced state reorganization and democratic federalism." },
+      { id: 20, year: "1956", title: "The Buddha and His Dhamma", desc: "Magnum opus reviving Navayana Buddhism as an ethical moral philosophy." },
+      { id: 21, year: "1956", title: "Revolution and Counter-Revolution in Ancient India", desc: "Analysis of the Buddhist revolution and Brahmanical counter-reaction." },
+      { id: 22, year: "1956", title: "The Buddha and Karl Marx", desc: "Comparative philosophy evaluating democratic morality versus state coercion." },
+      { id: 23, year: "1956", title: "Riddles in Hinduism", desc: "Critical historical investigation into religious scriptures and orthodox dogmas." },
+      { id: 24, year: "1918", title: "Small Holdings in India and Their Remedies", desc: "Agrarian economic paper on land subdivision and agricultural productivity." },
+      { id: 25, year: "1920", title: "Mooknayak Editorials", desc: "Foundational fortnightly essays championing the voice of the voiceless." },
+      { id: 26, year: "1927", title: "Bahishkrit Bharat Editorials", desc: "Essays chronicling the Mahad struggle and civil liberties mobilization." },
+      { id: 27, year: "1930", title: "Janata Articles", desc: "Political commentary advocating for worker rights and independent representation." },
+      { id: 28, year: "1928", title: "Statement on the Simon Commission", desc: "Memorandum on depressed classes representation in legislative councils." },
+      { id: 29, year: "1931", title: "Round Table Conference Proceedings", desc: "Speeches at the First and Second Round Table Conferences in London." },
+      { id: 30, year: "1932", title: "Evidence Before the Lothian Committee", desc: "Submissions defining the criteria and franchises for untouchability." },
+      { id: 31, year: "1942", title: "Post-War Economic Development", desc: "Labor Member policy papers on power grids, irrigation, and river valleys." },
+      { id: 32, year: "1944", title: "National Water and Power Grids Framework", desc: "Founding blueprints for the Central Water Commission and Damodar Valley." },
+      { id: 33, year: "1948", title: "Constituent Assembly Opening Reports", desc: "Official presentation of the Draft Constitution to President Rajendra Prasad." },
+      { id: 34, year: "1950", title: "Buddha and the Future of His Religion", desc: "Essay published in the Maha Bodhi Society journal." },
+      { id: 35, year: "1951", title: "Resignation Speech from the Cabinet", desc: "Principled resignation address on foreign policy and the stalled Hindu Code Bill." },
+      { id: 36, year: "1956", title: "The 22 Vows of Buddhism", desc: "Solemn pledges taken at Deekshabhoomi renouncing caste discrimination." },
+      { id: 37, year: "1956", title: "Voice of the Downtrodden", desc: "Collected letters, petitions, and personal legal briefs." },
+      { id: 38, year: "Posthumous", title: "Philosophy of Hinduism", desc: "Manuscript evaluating religious values, social utility, and individual liberty." },
+      { id: 39, year: "Posthumous", title: "India and the Pre-requisites of Communism", desc: "Comparative analysis of human freedom, fraternity, and economic justice." }
+    ];
+
+    function showBooksView() {
+      let html = `
+        <div class="module-hero-box">
+          <h3>THE DIGITAL LIBRARY (ALL 39 WORKS)</h3>
+          <p>Click any book to view an instant AI Summary.</p>
+        </div>
+        <div class="books-grid-39">
+          ${all39Books.map(b => `
+            <div class="book-interactive-card" onclick="alert('${b.title}: In this work, Dr. Ambedkar examines institutional inequality, constitutional morality, and democratic governance.')">
+              <span class="book-year-badge">${b.year}</span>
+              <h4 class="book-card-title">${b.title}</h4>
+              <p class="book-card-summary">${b.desc}</p>
+              <span class="ai-summary-pill">✨ Click for AI Summary</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+      openModal("LIBRARY", "Published Writings & Books", html);
+    }
+
+    /* ==========================================================================
+       BOT BABASAHEB (FIXED INTENT-MATCHING ENGINE)
+       ========================================================================== */
+    function showBotView() {
+      let html = `
+        <div class="module-hero-box">
+          <h3>BOT BABASAHEB (AI ARCHIVE)</h3>
+          <p>Ask questions about his family, education, constitution, wives, son, books, or philosophy.</p>
+        </div>
+        <div class="chat-container">
+          <div class="chat-messages" id="chatMessages">
+            <div class="chat-bubble bot">
+              Jai Bhim! I am Bot Babasaheb. You can ask me about my wives (Ramabai, Dr. Savita), son Yashwant, education at Columbia & LSE, Mahad Satyagraha, Constitution drafting, or my books.
+            </div>
+          </div>
+          <div class="chat-input-row">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Ask about wife, son, education, Constitution, books..." />
+            <button class="chat-send-btn" id="chatSend">Send</button>
+          </div>
+        </div>
+      `;
+      openModal("CONVERSATIONAL AGENT", "Bot Babasaheb", html);
+
+      const input = document.getElementById("chatInput");
+      const send = document.getElementById("chatSend");
+      const msgs = document.getElementById("chatMessages");
+
+      function replyUser() {
+        const q = input.value.trim();
+        if (!q) return;
+        const txt = q.toLowerCase();
+        msgs.innerHTML += `<div class="chat-bubble user">${q}</div>`;
+        input.value = "";
+
+        setTimeout(() => {
+          let botAns = "Educate, Agitate, Organise. Have faith in yourselves and never lose hope.";
+
+          if (txt.includes("wife") || txt.includes("ramabai") || txt.includes("savita") || txt.includes("married")) {
+            botAns = "I was first married to Matoshree Ramabai in 1906. Her silent sacrifices sustained me during my grueling studies abroad. After her passing, I married Dr. Savita Ambedkar (Mai) in 1948, a medical doctor who faithfully nursed me through chronic ailments while drafting the Constitution.";
+          } else if (txt.includes("son") || txt.includes("child") || txt.includes("yashwant")) {
+            botAns = "My only surviving son was Yashwantrao Ambedkar (affectionately called Bhaiyasaheb), born in 1912. He dedicated his life to community education, published the weekly Janata, and led the Buddhist Society of India.";
+          } else if (txt.includes("father") || txt.includes("parent") || txt.includes("mother") || txt.includes("ramji")) {
+            botAns = "My father Subedar Major Ramji Sakpal was an officer in the British Indian Army. He instilled in me rigorous discipline, love for reading, and Kabir's spiritual verses. My mother Bhimabai passed away when I was very young.";
+          } else if (txt.includes("constitution") || txt.includes("article 32") || txt.includes("preamble")) {
+            botAns = "As Chairman of the Drafting Committee, I presented the final Constitution on 25 November 1949. I consider Article 32 (Right to Constitutional Remedies) as the very heart and soul of the Constitution without which it would be a nullity.";
+          } else if (txt.includes("book") || txt.includes("annihilation") || txt.includes("caste")) {
+            botAns = "I wrote over 39 books. In 'Annihilation of Caste' (1936), I argued that caste is not merely a division of labour, but a division of labourers. In 1956, I completed my magnum opus 'The Buddha and His Dhamma'.";
+          } else if (txt.includes("mahad") || txt.includes("water") || txt.includes("tank")) {
+            botAns = "The Mahad Satyagraha of 20 March 1927 at Chawdar Tank was not merely to drink water; it was fought to establish our fundamental human dignity and civic equality.";
+          } else if (txt.includes("buddha") || txt.includes("conversion") || txt.includes("nagpur") || txt.includes("religion")) {
+            botAns = "On 14 October 1956 at Deekshabhoomi in Nagpur, I embraced Buddhism along with over 500,000 followers, taking the 22 vows. I chose Buddhism because it is founded on Prajna (wisdom), Karuna (compassion), and Samata (equality).";
+          } else if (txt.includes("education") || txt.includes("columbia") || txt.includes("london") || txt.includes("lse")) {
+            botAns = "I graduated from Elphinstone College in 1912, earned my M.A. and Ph.D. from Columbia University in New York, and my D.Sc. from the London School of Economics, while also being called to the Bar at Gray's Inn.";
+          } else if (txt.includes("women") || txt.includes("hindu code") || txt.includes("gender")) {
+            botAns = "I measure the progress of a community by the degree of progress which women have achieved. That is why I introduced the Hindu Code Bill to grant women equal inheritance, property, and divorce rights.";
+          }
+
+          msgs.innerHTML += `<div class="chat-bubble bot">${botAns}</div>`;
+          msgs.scrollTop = msgs.scrollHeight;
+        }, 350);
+      }
+
+      send.addEventListener("click", replyUser);
+      input.addEventListener("keypress", (e) => { if (e.key === "Enter") replyUser(); });
+    }
+
+    /* ==========================================================================
+       FAMILY CIRCLE
+       ========================================================================== */
+    const familyCircleData = [
+      { name: "Subedar Major Ramji Sakpal", role: "Father & Mentor", img: "father.jpg", lifespan: "1838 — 1913", desc: "A Subedar of the Mahar Regiment who pawned possessions to purchase books for young Bhimrao, instilling strict discipline and Kabir's egalitarian verses." },
+      { name: "Matoshree Ramabai Ambedkar", role: "First Wife & Pillar of Sacrifice", img: "FAM (1).jpeg", lifespan: "1898 — 1935", desc: "Endured poverty, personal loss, and prolonged separation in silence, enabling Babasaheb to study abroad. Babasaheb dedicated 'Thoughts on Pakistan' to her." },
+      { name: "Dr. Savita Ambedkar (Mai)", role: "Second Wife, Doctor & Companion", img: "FAM 2.jpg", lifespan: "1909 — 2003", desc: "A medical doctor who nursed Babasaheb through failing health during the drafting of the Constitution and preserved his archives for decades." },
+      { name: "Yashwantrao Ambedkar (Bhaiyasaheb)", role: "Son & Social Leader", img: "SON.jpg", lifespan: "1912 — 1977", desc: "The only surviving son of Babasaheb and Ramabai. He served as President of the Buddhist Society of India and editor of the weekly Janata." },
+      { name: "The Sanctuary at Rajgruha", role: "Family Sanctuary & Library", img: "FAM 4.jpeg", lifespan: "Dadar, Bombay", desc: "Custom-designed family home built to house Babasaheb's monumental collection of over 50,000 rare books and his close household circle." }
+    ];
+
+    function showFamilyView() {
+      let html = `
+        <div class="module-hero-box">
+          <h3>SACRED KINSHIP &amp; THE SANCTUARY AT RAJGRUHA</h3>
+          <p>Select any circular cameo below to inspect portraits and life stories.</p>
+        </div>
+
+        <div class="family-cameo-ring-row">
+          ${familyCircleData.map((f, i) => `
+            <div class="family-cameo-circle-item ${i === 0 ? 'active' : ''}" data-fidx="${i}">
+              <div class="family-cameo-circle-frame">
+                <img id="fcameo-${i}" alt="${f.name}" />
+              </div>
+              <span class="family-cameo-label">${f.name.split(' ')[0]}</span>
+            </div>
+          `).join('')}
+        </div>
+
+        <div class="family-active-dossier-card">
+          <div class="family-dossier-portrait">
+            <img id="familyDossierImg" alt="Portrait" />
+          </div>
+          <div style="display:flex; flex-direction:column; justify-content:center;">
+            <span class="speech-date-badge" id="familyRoleBadge">Role</span>
+            <h2 style="font-family:var(--font-heading); color:var(--parchment); margin:0.3rem 0;" id="familyNameTitle">Name</h2>
+            <span style="font-size:0.85rem; color:var(--gold-primary); margin-bottom:0.8rem;" id="familyLifespanTag">Lifespan</span>
+            <p id="familyNarrativeText" style="line-height:1.7; color:var(--text-dim); font-size:0.95rem;"></p>
+          </div>
+        </div>
+      `;
+
+      openModal("KINSHIP", "Family & Household", html);
+
+      familyCircleData.forEach((f, i) => {
+        loadSafeImg(document.getElementById(`fcameo-${i}`), f.img);
+      });
+
+      function selectFamilyCameo(idx) {
+        document.querySelectorAll(".family-cameo-circle-item").forEach((item, i) => {
+          item.classList.toggle("active", i === idx);
+        });
+        const current = familyCircleData[idx];
+        document.getElementById("familyRoleBadge").textContent = current.role;
+        document.getElementById("familyNameTitle").textContent = current.name;
+        document.getElementById("familyLifespanTag").textContent = current.lifespan;
+        document.getElementById("familyNarrativeText").textContent = current.desc;
+        loadSafeImg(document.getElementById("familyDossierImg"), current.img);
+      }
+
+      document.querySelectorAll(".family-cameo-circle-item").forEach(item => {
+        item.addEventListener("click", () => selectFamilyCameo(parseInt(item.dataset.fidx)));
+      });
+
+      selectFamilyCameo(0);
+    }
+
+    /* ==========================================================================
+       QUOTES MODULE
+       ========================================================================== */
+    const quotesArchive = [
+      { category: "education", categoryLabel: "Education", quote: "Cultivation of mind should be the ultimate aim of human existence.", source: "Speech on Self-Respect (1942)", img: "Ambedkar_Barrister.jpg" },
+      { category: "education", categoryLabel: "Education", quote: "Be educated, be organized, and be agitated.", source: "All-India Depressed Classes Conference (1942)", img: "Chairman Drafting Commitee.jpeg" },
+      { category: "democracy", categoryLabel: "Constitution", quote: "Political democracy cannot last unless there lies at the base of it social democracy.", source: "Constituent Assembly (Nov 25, 1949)", img: "Chairman Drafting Commitee.jpeg" },
+      { category: "equality", categoryLabel: "Equality", quote: "I measure the progress of a community by the degree of progress which women have achieved.", source: "Women's Conference (1942)", img: "law.jpeg" },
+      { category: "selfrespect", categoryLabel: "Self-Respect", quote: "Life should be great rather than long.", source: "Historic Aphorism", img: "Ambedkar_Barrister.jpg" }
+    ];
+
+    function showQuotesView(initialCategory = "all") {
+      let html = `
+        <div class="module-hero-box">
+          <h3>WORDS OF POWER & VISION</h3>
+          <p>Timeless aphorisms guiding generations toward self-respect, rationality, and civil liberties.</p>
+        </div>
+
+        <div class="quotes-filter-tabs">
+          <button class="q-filter-btn ${initialCategory === 'all' ? 'active' : ''}" data-cat="all">All Quotations</button>
+          <button class="q-filter-btn ${initialCategory === 'education' ? 'active' : ''}" data-cat="education">Education</button>
+          <button class="q-filter-btn ${initialCategory === 'democracy' ? 'active' : ''}" data-cat="democracy">Constitution</button>
+          <button class="q-filter-btn ${initialCategory === 'equality' ? 'active' : ''}" data-cat="equality">Equality</button>
+          <button class="q-filter-btn ${initialCategory === 'selfrespect' ? 'active' : ''}" data-cat="selfrespect">Self-Respect</button>
+        </div>
+
+        <div id="quotesCardsDeck"></div>
+      `;
+
+      openModal("PHILOSOPHICAL DICTA", "Words of Dr. B. R. Ambedkar", html);
+
+      function renderFilteredQuotes(cat) {
+        const deck = document.getElementById("quotesCardsDeck");
+        deck.innerHTML = "";
+        const list = cat === "all" ? quotesArchive : quotesArchive.filter(q => q.category === cat);
+
+        list.forEach((q, idx) => {
+          const card = document.createElement("article");
+          card.className = "quote-display-card";
+          card.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span class="quote-category-tag">${q.categoryLabel}</span>
+              <div style="width:38px; height:38px; border-radius:50%; border:1px solid var(--gold-primary); overflow:hidden; background:#0f0805;">
+                <img id="qimg-${idx}" style="width:100%; height:100%; object-fit:cover;" alt="Dr. Ambedkar" />
+              </div>
+            </div>
+            <p class="quote-main-content">“${q.quote}”</p>
+            <div class="quote-author-source">
+              <span>— DR. B. R. AMBEDKAR</span>
+              <span style="font-size:0.65rem; color:var(--gold-primary);">${q.source}</span>
+            </div>
+          `;
+          deck.appendChild(card);
+          loadSafeImg(card.querySelector(`#qimg-${idx}`), q.img);
+        });
+      }
+
+      document.querySelectorAll(".q-filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".q-filter-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderFilteredQuotes(btn.dataset.cat);
+        });
+      });
+
+      renderFilteredQuotes(initialCategory);
+    }
+
+    /* ==========================================================================
+       DIRECT NAVIGATION & ACTIONS
+       ========================================================================== */
+    function executeAction(actionName, targetFolder, inAppFallback) {
+      if (targetFolder) {
+        window.location.href = targetFolder;
+      } else {
+        inAppFallback();
+      }
+    }
+
+    const fallbacks = {
+      timeline: () => executeAction("timeline", "Get to know him more/Images/images.html", () => {}),
+      bot: () => executeAction("bot", "chatbot/chatbot.html", () => {}),
+      books: () => executeAction("books", "books/books.html", () => {}),
+      speeches: () => executeAction("speeches", "speech/speech.html", () => {}),
+      constitution: () => executeAction("constitution", "constitution/constitution.html", () => {}),
+      family: () => executeAction("family", "Family/Image/image.html", () => {}),
+      movement: () => executeAction("movement", "Movement/movement.html", () => {}),
+      quotes: () => executeAction("quotes", "explore/explore.html", () => {}),
+      photos: () => executeAction("photos", "meet/meet.html", () => {}),
+      video: () => executeAction("video", "video/video.html", () => {}),
+      quiz: () => executeAction("quiz", "quiz/quiz.html", () => {}),
+      global: () => executeAction("global", "global/global.html", () => {})
+    };
+
+    document.querySelectorAll(".aesthetic-widget-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const act = card.dataset.action;
+        const target = card.dataset.target;
+        executeAction(act, target, fallbacks[act]);
+      });
+    });
+
+    document.getElementById("heroExploreBtn").addEventListener("click", () => {
+      window.location.href = "Get to know him more/Images/images.html";
+    });
+
+    document.getElementById("dailyQuoteWidget").addEventListener("click", () => {
+      showQuotesView("selfrespect");
+    });
+  </script>
+
+  <!-- Non-blocking Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      try {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false
+        }, 'google_translate_element');
+      } catch (err) {}
+    }
+  </script>
+  <script type="text/javascript" async src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

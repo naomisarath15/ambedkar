@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Library of 89 Works | Dr. B. R. Ambedkar</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="books.css" />
+</head>
+<body>
+	<main class="library-shell">
+		<header class="library-header">
+			<div>
+				<a href="../home/home.html" class="back-link">&larr; Back to Dashboard</a>
+				<p class="eyebrow">THE DIGITAL READING ROOM</p>
+				<h1>89 Works by Dr. B. R. Ambedkar</h1>
+				<p class="intro">Browse economics, law, social reform, journalism, religion, and constitutional thought. Select any work for a focused AI-style archival summary.</p>
+			</div>
+			<div class="library-count"><strong id="bookCount">89</strong><span>catalogued works</span></div>
+		</header>
+
+		<section class="library-toolbar" aria-label="Book filters">
+			<label class="search-field"><span>Search works</span><input id="bookSearch" type="search" placeholder="Title, year, or subject" /></label>
+			<label class="select-field"><span>Collection</span><select id="bookCategory"><option value="all">All collections</option></select></label>
+		</section>
+
+		<section class="library-layout">
+			<div class="book-grid" id="bookGrid" aria-live="polite"></div>
+			<aside class="summary-panel" id="summaryPanel">
+				<p class="eyebrow">SELECTED WORK</p>
+				<div class="summary-year" id="summaryYear">1916</div>
+				<h2 id="summaryTitle">Castes in India</h2>
+				<p class="summary-category" id="summaryCategory">Social reform</p>
+				<p id="summaryText">Select a title to read its summary.</p>
+				<button class="speak-button" id="speakSummary" type="button">Listen to summary</button>
+			</aside>
+		</section>
+	</main>
+	<script src="books.js"></script>
+</body>
+</html>

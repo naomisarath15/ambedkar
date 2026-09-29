@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speech Cinema | Dr. B. R. Ambedkar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="video.css" />
+</head>
+<body>
+  <main class="video-shell">
+    <a href="../home/home.html" class="back-link">&larr; Back to Dashboard</a>
+    <p class="eyebrow">SPEECH CINEMA</p>
+    <h1>Hear the constitutional imagination</h1>
+    <p class="intro">Selected public recordings and archival talks. Use the transcript beside each film as a reading companion.</p>
+    <section class="video-layout">
+      <div class="video-player"><iframe id="videoFrame" src="https://www.youtube.com/embed/lPsZLK540Cg?start=122" title="Dr. B. R. Ambedkar speech video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a id="youtubeFallback" class="youtube-fallback" style="position:absolute;left:12px;bottom:12px;background:#fff0c2;color:#211108;padding:8px 11px;font-size:.72rem;font-weight:800;text-decoration:none;border-radius:4px;" href="https://www.youtube.com/watch?v=lPsZLK540Cg&amp;t=122s" target="_blank" rel="noopener">Open this video on YouTube</a></div>
+      <aside class="video-list" id="videoList"></aside>
+    </section>
+    <article class="transcript" id="transcript"></article>
+  </main>
+  <script src="video.js"></script>
+</body>
+</html>

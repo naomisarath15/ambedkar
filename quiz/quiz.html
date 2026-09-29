@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ambedkar Quest | Touch Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+  <main class="quest-shell">
+    <a href="../home/home.html" class="back-link">&larr; Back to Dashboard</a>
+    <header><p class="eyebrow">ARCHIVE QUEST</p><h1>Journey to Columbia</h1><p>Answer five questions to earn diamonds, then guide Babasaheb through the maze from Mhow to Columbia University.</p></header>
+    <section id="quizStage" class="quiz-stage"><div class="progress-row"><span id="questionProgress">Question 1 of 5</span><span id="diamondCount">0 diamonds</span></div><h2 id="questionText"></h2><div class="answer-grid" id="answerGrid"></div><p class="feedback" id="quizFeedback"></p></section>
+    <section id="mazeStage" class="maze-stage hidden"><div class="progress-row"><span id="mazeStatus">Reach Columbia University</span><span id="mazeDiamonds">0 diamonds</span></div><div class="maze" id="maze"></div><p id="mazeMessage" class="maze-message">Use the arrow keys or buttons to travel. Reach the blue campus tile.</p><div class="maze-controls"><button data-move="up">Up</button><button data-move="left">Left</button><button data-move="down">Down</button><button data-move="right">Right</button></div><article id="columbiaReveal" class="columbia-reveal hidden"><p class="eyebrow">YOU ARRIVED</p><h2>Columbia University, 1913–1916</h2><p>Ambedkar studied economics, political science, sociology, and philosophy in New York. His work with John Dewey and the intellectual freedom he found at Columbia helped shape his later commitment to constitutional democracy and social equality.</p></article></section>
+  </main>
+  <script src="quiz.js"></script>
+</body>
+</html>

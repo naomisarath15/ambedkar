@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root[data-theme="dark"] {
+  --bg-app: #140803;
+  --bg-primary: #241209;         /* Rich roast walnut */
+  --bg-surface: #2d160b;        /* Deep espresso */
+  --bg-card: #fcf9f2;           /* Ivory archival paper */
+  --bg-card-hover: #f5eedf;
+  --card-text: #190c05;         /* Walnut ink */
+  --card-text-muted: #665040;
+  --text-main: #fbf7ef;         /* Crisp vellum cream */
+  --text-muted: #caa990;
+  --accent-gold: #c9933b;       /* Burnished museum gold */
+  --accent-gold-soft: rgba(201, 147, 59, 0.12);
+  --border-gold: rgba(201, 147, 59, 0.35);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --shadow-kiosk: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+:root[data-theme="light"] {
+  --bg-app: #e8ded2;
+  --bg-primary: #f5ede1;
+  --bg-surface: #ece1d1;
+  --bg-card: #ffffff;
+  --bg-card-hover: #faf6ee;
+  --card-text: #1f0f07;
+  --card-text-muted: #5e4a3c;
+  --text-main: #1f0f07;
+  --text-muted: #6e5441;
+  --accent-gold: #966b1a;
+  --accent-gold-soft: rgba(150, 107, 26, 0.1);
+  --border-gold: rgba(150, 107, 26, 0.35);
+  --border-subtle: rgba(0, 0, 0, 0.09);
+  --shadow-kiosk: 0 16px 40px rgba(50, 24, 12, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.kiosk-shell {
+  width: 100%;
+  max-width: 1180px;
+  height: 92vh;
+  background-color: var(--bg-primary);
+  border: 1.5px solid var(--border-gold);
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-kiosk), 0 0 0 8px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.35s ease;
+}
+
+/* Polished Line-Art Icon Sizing */
+.line-icon {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  flex-shrink: 0;
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Shared Header */
+.kiosk-top-nav {
+  width: 100%;
+  padding: 18px 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid var(--border-gold);
+  background: var(--bg-surface);
+  z-index: 20;
+}
+
+.nav-button {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-gold);
+  color: var(--text-main);
+  padding: 9px 20px;
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s;
+}
+
+.nav-button:active {
+  transform: scale(0.93);
+  background: var(--accent-gold);
+  color: #170903;
+}

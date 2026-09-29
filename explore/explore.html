@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore — Archival Publications & Press (50+ Records)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="explore.css" />
+</head>
+<body>
+
+  <div class="archive-container">
+    <header class="archive-topbar">
+      <div>
+        <a href="../home/home.html" class="back-link">&larr; Back to Dashboard</a>
+        <h1 class="brand-title">Archival Publications & Periodicals</h1>
+      </div>
+      <div class="records-counter" id="recordCount">Showing 52 Archival Records</div>
+    </header>
+
+    <!-- FILTERS -->
+    <div class="filter-bar">
+      <input type="text" id="searchInput" placeholder="Search across 50+ articles, topics, publications, or years..." />
+      <div class="tag-filters" id="tagFilters">
+        <button class="filter-btn active" data-periodical="all">All (50+)</button>
+        <button class="filter-btn" data-periodical="Mooknayak">Mooknayak (1920)</button>
+        <button class="filter-btn" data-periodical="Bahishkrit Bharat">Bahishkrit Bharat (1927–29)</button>
+        <button class="filter-btn" data-periodical="Samata">Samata (1928–30)</button>
+        <button class="filter-btn" data-periodical="Janata">Janata (1930–56)</button>
+        <button class="filter-btn" data-periodical="Prabuddha Bharat">Prabuddha Bharat (1956)</button>
+        <button class="filter-btn" data-periodical="Press Articles">Independent Press</button>
+      </div>
+    </div>
+
+    <!-- 50+ ARTICLES GRID -->
+    <div class="articles-grid" id="articlesContainer"></div>
+  </div>
+
+  <!-- ARTICLE READER MODAL -->
+  <div class="article-modal-overlay" id="articleModal">
+    <div class="article-modal-card">
+      <button class="modal-close-btn" id="closeArticleModal">&times;</button>
+      <span class="modal-periodical-badge" id="modalPeriodical"></span>
+      <h2 class="modal-article-title" id="modalTitle"></h2>
+      <div class="modal-article-meta" id="modalMeta"></div>
+      <div class="modal-article-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="explore.js"></script>
+</body>
+</html>

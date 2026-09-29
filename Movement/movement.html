@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Historic Movements — Dr. B. R. Ambedkar Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="movement.css?v=2" />
+</head>
+<body>
+
+  <div class="archive-container">
+    
+    <!-- Topbar Navigation -->
+    <header class="movement-topbar">
+      <div class="brand-group">
+        <a href="../home/home.html" class="back-link">&larr; Back to Dashboard</a>
+        <h1 class="brand-title">Movements, Satyagrahas & Agitations</h1>
+      </div>
+      <div class="counter-badge" id="slideCounter">Record 1 / 14</div>
+    </header>
+
+    <!-- Main Movement Showcase -->
+    <main class="movement-showcase-card">
+      
+      <!-- Left / Top: Frame with Movement Archival Photo -->
+      <div class="photo-frame-wrapper">
+        <div class="archival-matting">
+          <img id="movementPhoto" src="Images/mahad satyagraha 1927.jpeg" alt="Historical Movement Archive" class="movement-active-img" />
+          <div class="archival-vignette"></div>
+        </div>
+      </div>
+
+      <!-- Right / Bottom: Movement Year, Title, & Historical Script -->
+      <div class="caption-pane">
+        <div class="movement-meta-tag" id="movementYear">1927 &bull; WATER REVOLUTION</div>
+        <h2 class="movement-title" id="movementTitle">Mahad Satyagraha</h2>
+        <div class="movement-tagline" id="movementTagline">"Assertion of fundamental human equality at Chavadar Tank."</div>
+
+        <blockquote class="movement-script" id="movementScript">
+          Loading movement records...
+        </blockquote>
+
+        <p class="movement-impact" id="movementImpact">
+          Impact and historical significance details.
+        </p>
+
+        <!-- Navigation Controls -->
+        <div class="controls-row">
+          <button class="nav-control-btn" id="prevBtn" title="Previous Movement">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+            <span>Previous</span>
+          </button>
+          
+          <button class="nav-control-btn nav-primary-btn" id="nextBtn" title="Next Movement">
+            <span>Next Movement</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Bottom Thumbnail Carousel -->
+    <footer class="filmstrip-footer">
+      <div class="filmstrip-label">Select Archival Movement (14 Documented Records):</div>
+      <div class="filmstrip-row" id="filmstripRow"></div>
+    </footer>
+
+  </div>
+
+  <script src="movement.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Meet Him (Archival Film Footage) — Dr. B.R. Ambedkar Touch Archive</title>
+  <link rel="stylesheet" href="../common/common-theme.css" />
+  <link rel="stylesheet" href="meet.css" />
+</head>
+<body>
+
+<div class="kiosk-shell">
+  <header class="kiosk-top-nav">
+    <div style="display:flex; align-items:center; gap:16px;">
+      <a href="../home/home.html" class="nav-button">
+        <span id="backIcon"></span> Return to Home
+      </a>
+      <h1 style="font-family:'Playfair Display', serif; font-size:1.85rem;">Meet Him (Direct Archival Player)</h1>
+    </div>
+  </header>
+
+  <main class="cinema-scroll-area">
+    <!-- Standalone HTML5 Cinema Player -->
+    <div class="cinema-display-deck" id="cinemaDeck">
+      <!-- Direct HTML5 video with controls -->
+      <video id="kioskVideoPlayer" controls playsinline preload="auto">
+        <source id="videoSource" src="" type="video/mp4" />
+        Your browser does not support HTML5 video streaming.
+      </video>
+
+      <!-- Overlay before playing -->
+      <div id="deckPlaceholder" class="deck-placeholder" onclick="playFirstReel()">
+        <div class="play-symbol-circle">
+          <svg style="width:28px; height:28px; fill:currentColor; margin-left:3px;" viewBox="0 0 24 24">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+        </div>
+        <p id="nowPlayingLabel" style="color:#fff; font-weight:600; font-size:0.95rem;">Tap "Play Footage" on any archival reel below to start.</p>
+      </div>
+    </div>
+
+    <!-- Catalog of Film Reels -->
+    <section class="reel-catalog" id="reelCatalog"></section>
+  </main>
+</div>
+
+<script src="../common/common-icons.js"></script>
+<script src="meet.js"></script>
+</body>
+</html>

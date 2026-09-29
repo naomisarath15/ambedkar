@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get To Know Him More | Babasaheb Dr. B. R. Ambedkar</title>
+  
+  <!-- Archival Typography: Cinzel for headers/dates & Plus Jakarta Sans for narrative -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="images.css" />
+</head>
+<body>
+
+  <!-- Golden Flare Sweep Light Effect -->
+  <div id="goldenFlare" class="flare-sweep"></div>
+
+  <!-- Ambient Radial Vignette -->
+  <div class="ambient-vignette"></div>
+
+  <header class="archival-header">
+    <div class="header-inner">
+      <div class="crest-mark">🏛️ ARCHIVAL CHRONICLE</div>
+      <h1 class="main-title">GET TO KNOW HIM MORE</h1>
+      <p class="subtitle">An Interactive Journey through the Historic Milestones of Dr. B. R. Ambedkar</p>
+       <div class="knowledge-ribbon" aria-label="Life overview">
+         <article><strong>1891–1913</strong><span>Early life, school, and Bombay education</span></article>
+         <article><strong>1913–1923</strong><span>Columbia, London, economics, and law</span></article>
+         <article><strong>1927–1956</strong><span>Mass movements, Constitution, and Dhamma</span></article>
+       </div>
+    </div>
+  </header>
+
+  <main class="timeline-museum-container">
+    
+    <!-- TOP SECTION: STRAIGHT DOTTED SPINE TIMELINE -->
+    <section class="timeline-viewport-wrapper">
+      <div class="timeline-scroll-hint">
+        <span>← SCROLL OR DRAG HORIZONTALLY • USE ARROW KEYS →</span>
+      </div>
+
+      <div class="timeline-viewport" id="timelineViewport">
+        <div class="timeline-spine-track" id="timelineTrack">
+          <!-- Waypoint Cameo Nodes injected by images.js -->
+        </div>
+      </div>
+
+      <!-- Navigation Pill Bar -->
+      <div class="timeline-controls-bar">
+        <button id="prevBtn" class="pill-nav-btn" aria-label="Previous Era">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+          <span>Previous Era</span>
+        </button>
+
+        <div class="era-index-indicator" id="eraIndicator">Era 01 / 11</div>
+
+        <button id="nextBtn" class="pill-nav-btn" aria-label="Next Era">
+          <span>Next Era</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- BOTTOM SECTION: ARCHIVAL REVEAL STAGE -->
+    <section class="archival-reveal-stage" id="revealStage">
+      
+      <!-- Museum Matting Container (object-fit: contain - never cropped or cut off) -->
+      <div class="archival-portrait-container">
+        <div class="museum-matting-frame">
+          <img id="revealImage" alt="Archival Historical Document" />
+          <div class="museum-plate-caption" id="imageCaption">Loading archival plate...</div>
+        </div>
+      </div>
+
+      <!-- Historical Dossier -->
+      <article class="historical-dossier">
+        <div class="dossier-meta-badge">
+          <span class="badge-era" id="dossierEraTag">ERA 01</span>
+          <span class="badge-years" id="dossierYears">1908 – 1913</span>
+        </div>
+
+        <h2 class="dossier-title" id="dossierTitle">Loading title...</h2>
+        <h3 class="dossier-tagline" id="dossierTagline">Loading subtitle...</h3>
+
+        <div class="dossier-significance-callout">
+          <h4>HISTORICAL NARRATIVE &amp; DETAILS</h4>
+          <div class="dossier-narrative-block" id="dossierNarrative"></div>
+        </div>
+
+        <!-- Evidence Deck Thumbnails -->
+        <div class="evidence-artifacts-deck">
+          <h4>ARCHIVAL EVIDENCE PREVIEWS</h4>
+          <div class="artifact-thumbnails-row" id="artifactDeck"></div>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="archival-footer">
+    <p>Curated for the Dr. B. R. Ambedkar Touch-Screen Memorial &bull; Historical Research Archives</p>
+  </footer>
+
+  <script src="images.js"></script>
+</body>
+</html>

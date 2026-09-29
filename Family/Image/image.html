@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Family Archive — Dr. B. R. Ambedkar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="image.css?v=2" />
+</head>
+<body>
+
+  <div class="archive-container">
+    
+    <!-- Topbar Navigation -->
+    <header class="family-topbar">
+      <div class="brand-group">
+        <a href="../../home/home.html" class="back-link">&larr; Back to Dashboard</a>
+        <h1 class="brand-title">Family Vault & Kinship</h1>
+      </div>
+      <div class="counter-badge" id="slideCounter">Record 1 / 6</div>
+    </header>
+
+    <!-- Main Showcase Stage -->
+    <main class="family-showcase-card">
+      
+      <!-- Frame with Full Uncropped Archival Picture -->
+      <div class="photo-frame-wrapper">
+        <div class="archival-matting">
+          <img id="familyPhoto" src="FAM (1).jpeg" alt="Ambedkar Family Record" class="family-active-img" />
+          <div class="archival-vignette"></div>
+        </div>
+      </div>
+
+      <!-- Captions, Titles & One-Liners -->
+      <div class="caption-pane">
+        <div class="relation-kicker" id="personRelation">FIRST WIFE & PILLAR OF SACRIFICE</div>
+        <h2 class="person-name" id="personTitle">Matoshree Ramabai Ambedkar</h2>
+        <div class="person-lifespan" id="personLifespan">1898 — 1935</div>
+
+        <blockquote class="biography-one-liner" id="personOneLiner">
+          "Ramabai endured extreme penury, personal loss, and prolonged separation in silence, enabling Babasaheb to complete his higher studies abroad."
+        </blockquote>
+
+        <p class="archival-context" id="personDetails">
+          Affectionately called 'Ramai', Babasaheb dedicated his monumental book <em>Thoughts on Pakistan</em> to her, revering her goodness of heart, nobility of mind, and silent suffering during his early struggles.
+        </p>
+
+        <!-- Navigation Controls -->
+        <div class="controls-row">
+          <button class="nav-control-btn" id="prevBtn" title="Previous Family Member">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+            <span>Previous</span>
+          </button>
+          
+          <button class="nav-control-btn nav-primary-btn" id="nextBtn" title="Next Family Member">
+            <span>Next Family Record</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Filmstrip Thumbnails -->
+    <footer class="filmstrip-footer">
+      <div class="filmstrip-label">Select Archival Family Record:</div>
+      <div class="filmstrip-row" id="filmstripRow"></div>
+    </footer>
+
+  </div>
+
+  <script src="image.js"></script>
+</body>
+</html>

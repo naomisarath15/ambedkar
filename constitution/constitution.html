@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Constitution — Landmark Articles & Laws</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="constitution.css" />
+</head>
+<body>
+
+  <div class="archive-container">
+    <header class="archive-topbar">
+      <div>
+        <a href="../home/home.html" class="back-link">&larr; Back to Dashboard</a>
+        <h1 class="brand-title">The Constitution of India</h1>
+        <p class="brand-subtitle">Architectural Articles, Fundamental Rights, and Babasaheb's Drafting Commentary</p>
+      </div>
+    </header>
+
+    <!-- PREAMBLE HIGHLIGHT BANNER -->
+    <div class="preamble-card">
+      <span class="preamble-tag">The Sovereign Preamble</span>
+      <h2 class="preamble-text">
+        "WE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC and to secure to all its citizens: JUSTICE, LIBERTY, EQUALITY, and FRATERNITY."
+      </h2>
+      <div class="preamble-note">Adopted 26th November 1949 &bull; Drafting Committee Chairman: Dr. B. R. Ambedkar</div>
+    </div>
+
+    <div class="audience-filter" id="audienceFilter" aria-label="Browse laws by audience">
+      <button class="audience-chip active" data-audience="all" type="button">Everyone</button>
+      <button class="audience-chip" data-audience="women" type="button">For women</button>
+      <button class="audience-chip" data-audience="employees" type="button">For employees</button>
+      <button class="audience-chip" data-audience="children" type="button">For children</button>
+      <button class="audience-chip" data-audience="marginalized" type="button">For marginalized communities</button>
+    </div>
+
+    <!-- ARTICLES INTERFACE -->
+    <div class="constitution-layout">
+      <!-- Sidebar Navigation -->
+      <div class="articles-nav" id="articlesNav"></div>
+
+      <!-- Main Display -->
+      <div class="article-viewer" id="articleViewer">
+        <span class="viewer-category" id="viewCategory">Fundamental Rights</span>
+        <h2 class="viewer-article-title" id="viewTitle">Article 14 — Equality before Law</h2>
+        <div class="viewer-legal-text" id="viewLegalText"></div>
+        <div class="viewer-commentary-box">
+          <div class="commentary-title">Dr. Ambedkar's Drafting Philosophy & Assembly Context</div>
+          <p id="viewCommentary"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="constitution.js?v=3"></script>
+</body>
+</html>

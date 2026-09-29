@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Journey | Dr. B. R. Ambedkar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css" />
+</head>
+<body>
+  <main class="global-shell">
+    <a href="../home/home.html" class="back-link">&larr; Back to Dashboard</a>
+    <p class="eyebrow">GLOBAL JOURNEY</p>
+    <h1>Follow the places that shaped the work</h1>
+    <p class="intro">Select a location to move through Ambedkar's education, legal training, public service, and global recognition.</p>
+    <section class="map-layout">
+      <div class="world-map" aria-label="Archival world map with Ambedkar locations">
+        <div class="map-canvas">
+          <img src="Images/world map.jpg" alt="World map with locations from Dr. B. R. Ambedkar's life" />
+          <div id="mapPins"></div>
+        </div>
+      </div>
+      <aside class="location-panel"><p class="eyebrow" id="locationType">SELECT A PIN</p><h2 id="locationTitle">His world in five coordinates</h2><p id="locationText">The map connects Mhow, Bombay, New York, London, and Nagpur to the ideas and work associated with each place.</p><div class="location-list" id="locationList"></div></aside>
+    </section>
+  </main>
+  <script src="global.js"></script>
+</body>
+</html>
