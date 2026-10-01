@@ -4,6 +4,9 @@ const audioButtonLabel = document.getElementById("audioButtonLabel");
 const audioStatus = document.getElementById("audioStatus");
 let audioRequested = false;
 
+const introAudio = new Audio("intro%20voice.mp3");
+introAudio.play().catch(() => {});
+
 function updateAudioButton(isPlaying) {
 	audioButtonLabel.textContent = isPlaying ? "Pause the quote" : "Listen to the quote";
 	audioToggle.querySelector(".audio-icon").textContent = isPlaying ? "Ⅱ" : "▶";
