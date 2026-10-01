@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#0a0604" />
+	<title>Dr. B. R. Ambedkar | Ambedkar Touch Archive</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Playfair+Display:ital,wght@1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="portalstyle.css" />
+</head>
+<body>
+	<div class="ambient-backdrop" aria-hidden="true"></div>
+	<main class="portal-shell">
+		<header class="portal-header">
+			<a class="brand" href="../index.html?archive=1" aria-label="Life Line home">
+				<span class="brand-crest-icon" aria-hidden="true">
+					<svg viewBox="0 0 40 40" fill="none" class="crest-svg">
+						<path d="M7 29C11 27 16 27 20 29.5V11C16 9 11 9 7 11V29Z" stroke="#dfb15b" stroke-width="2" />
+						<path d="M33 29C29 27 24 27 20 29.5V11C24 9 29 9 33 11V29Z" stroke="#dfb15b" stroke-width="2" />
+						<path d="M20 7V29.5" stroke="#dfb15b" stroke-width="1.8" />
+						<circle cx="8" cy="8" r="1.5" fill="#dfb15b" />
+						<circle cx="32" cy="8" r="1.5" fill="#dfb15b" />
+						<path d="M20 3L21.5 5.5L24 7L21.5 8.5L20 11L18.5 8.5L16 7L18.5 5.5L20 3Z" fill="#dfb15b" />
+					</svg>
+				</span>
+				<span class="brand-copy">
+					<span class="brand-title">Life Line</span>
+					<span class="brand-tagline">THE JOURNEY OF A VISIONARY</span>
+				</span>
+			</a>
+			<span class="header-caption">A LIFE IN THE SERVICE OF JUSTICE</span>
+		</header>
+
+		<section class="tribute" aria-labelledby="tribute-name">
+			<div class="portrait-wrap">
+				<img class="portrait" src="images%20(5).jpg" alt="Portrait of Dr. B. R. Ambedkar" />
+				<span class="portrait-caption">BABASAHEB</span>
+			</div>
+
+			<div class="tribute-content">
+				<p class="eyebrow">A LEGACY THAT LIVES ON</p>
+				<h1 id="tribute-name">Dr. B. R.<br class="desktop-break" /> Ambedkar</h1>
+				<div class="life-dates" aria-label="Born 14 April 1891, passed away 6 December 1956">
+					<p><span class="date-label">BORN</span><time datetime="1891-04-14">14 April 1891</time></p>
+					<span class="date-divider" aria-hidden="true"></span>
+					<p><span class="date-label">PASSED AWAY</span><time datetime="1956-12-06">6 December 1956</time></p>
+				</div>
+
+				<blockquote class="quote-block">
+					<span class="quote-mark" aria-hidden="true">“</span>
+					<p class="quote-text">Our difficulty is not with regard to the ultimate our difficulty is with regard to the beginning...</p>
+					<footer class="quote-attribution">— DR. B. R. AMBEDKAR</footer>
+				</blockquote>
+
+				<section class="meaning" aria-labelledby="meaning-title">
+					<h2 id="meaning-title">MEANING</h2>
+					<p>The true challenge of building a nation lies in making a diverse population take a shared decision and start walking together, rather than doubting the final destination of unity.</p>
+				</section>
+
+				<div class="portal-actions">
+					<button class="audio-button" id="audioToggle" type="button" aria-pressed="false" aria-label="Play the quote audio">
+						<span class="audio-icon" aria-hidden="true">▶</span>
+						<span id="audioButtonLabel">Listen to the quote</span>
+					</button>
+					  <audio id="quoteAudio" src="QUOTE.ogg" preload="none"></audio>
+					<a class="archive-link" href="../index.html?archive=1">Enter the archive <span aria-hidden="true">→</span></a>
+				</div>
+				<p class="audio-status" id="audioStatus" aria-live="polite"></p>
+			</div>
+		</section>
+
+		<footer class="page-footer">REMEMBERING DR. BHIMRAO RAMJI AMBEDKAR</footer>
+	</main>
+	<script src="portalscript.js"></script>
+</body>
+</html>
